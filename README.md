@@ -116,9 +116,9 @@ ORDER BY
 
 
 ### Task 3: Evaluate how discount application influences:
-### Purchase amount
-### Repeat purchases
-### Assess whether discounts are attracting loyal customers or only one-time buyers.
+- Purchase amount
+- Repeat purchases
+- Assess whether discounts are attracting loyal customers or only one-time buyers.
 
 
 ```sql
@@ -144,8 +144,7 @@ GROUP BY discount_applied;
 
 
 
-### Task: 4 Revenue by Category & Season
-### Find which product categories generate the most revenue and whether this changes by season.
+### Task: 4 Revenue by Category & Season: Find which product categories generate the most revenue and whether this changes by season.
 
 ```sql
 select category, season , sum(purchase_amount_usd) as total_revenue
@@ -155,9 +154,7 @@ group by category, season ;
 
 ## Clothing makes the most money in every season. Accessories are second, footwear is average, and outerwear brings the least. The main product focus should stay on clothing all year.
 
-
-### Task 5 — Payment Method & Spending Identify: 
-   ###       The most commonly used payment methods Whether some payment methods are linked to higher spending
+## Task 5 — Payment Method & Spending Identify: The most commonly used payment methods Whether some payment methods are linked to higher spending
 
 
 ```sql
@@ -183,11 +180,10 @@ ORDER BY total_revenue DESC;
 
 
 ### Task 6 — Customer Purchase Frequency Segments
-
-### Group customers into behavior types such as:
-### Frequent buyers
-### Occasional buyers
-### Based on how often they shop and how much they spend.
+- Group customers into behavior types such as:
+- Frequent buyers
+- Occasional buyers
+- Based on how often they shop and how much they spend.
 
 ```sql
 SELECT
@@ -216,10 +212,10 @@ ORDER BY total_revenue DESC;
 
 ### Task 7 — Ratings & Product Strategy
 
-### Check whether review ratings are higher for:
-### Certain categories
-### Certain sizes
-### Certain seasons
+- Check whether review ratings are higher for:
+- Certain categories
+- Certain sizes
+- Certain seasons
 
 ```sql
 SELECT 'Category' AS type, category AS item, AVG(review_rating) AS avg_rating
@@ -242,9 +238,9 @@ ORDER BY type, avg_rating DESC;
 
 
 ### Task 8 — Location-Based Opportunity
-### Find locations where:
-### Customers spend a lot
-### But do not shop often
+- Find locations where:
+- Customers spend a lot
+-But do not shop often
 
 ```sql
 SELECT
