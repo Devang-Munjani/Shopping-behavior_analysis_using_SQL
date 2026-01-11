@@ -75,10 +75,10 @@ ORDER BY total_purchase_amount DESC;
 
 
 ### Task 2:
-###  Analyze whether subscription status has any meaningful impact on:
-### - Purchase amount
-### - Purchase frequency
-### - Previous purchase history
+  Analyze whether subscription status has any meaningful impact on:
+ - Purchase amount
+ - Purchase frequency
+ - Previous purchase history
 
 ```sql
 SELECT
