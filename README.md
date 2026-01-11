@@ -43,8 +43,7 @@ CREATE TABLE shopping(
 ## Business Problems and Solutions
 
 
-###Task 1: Identify which customer age groups contribute the most to total purchase amount and 
-###        evaluate whether spending behavior changes significantly across age brackets.
+### Task 1: Identify which customer age groups contribute the most to total purchase amount and evaluate whether spending behavior changes significantly across age brackets.
 
 ```sql
 SELECT
@@ -69,15 +68,14 @@ GROUP BY age_group
 ORDER BY total_purchase_amount DESC;
 ````
 
-###Older customers bring the most total money, but younger and older customers spend almost the same per person. 
-###The reason older customers bring more money is because there are more of them, not because they spend more.
+### Older customers bring the most total money, but younger and older customers spend almost the same per person. The reason older customers bring more money is because there are more of them, not because they spend more.
 
 
-###Task 2:
-###Analyze whether subscription status has any meaningful impact on:
-###- Purchase amount
-###- Purchase frequency
-###- Previous purchase history
+### Task 2:
+###  Analyze whether subscription status has any meaningful impact on:
+### - Purchase amount
+### - Purchase frequency
+### - Previous purchase history
 
 ```sql
 SELECT
@@ -109,16 +107,15 @@ ORDER BY
 ```
 
 
-###People with a subscription do not spend more or buy more often than people without one. 
-###There are just fewer subscribers. So the subscription plan is not really changing how people shop.
+### People with a subscription do not spend more or buy more often than people without one. There are just fewer subscribers. So the subscription plan is not really changing how people shop.
 
 
 
 
-###Task 3: Evaluate how discount application influences:
-###Purchase amount
-###Repeat purchases
-###Assess whether discounts are attracting loyal customers or only one-time buyers.
+### Task 3: Evaluate how discount application influences:
+### Purchase amount
+### Repeat purchases
+### Assess whether discounts are attracting loyal customers or only one-time buyers.
 
 
 ```sql
@@ -140,13 +137,12 @@ FROM (
 GROUP BY discount_applied;
 ````
 
-###People who use discounts do not spend more money. T
-###hey only buy slightly more often. So discounts are mostly used by customers who already like the brand, not to bring in new big buyers.
+### People who use discounts do not spend more money. They only buy slightly more often. So discounts are mostly used by customers who already like the brand, not to bring in new big buyers.
 
 
 
-###Task: 4 Revenue by Category & Season
-###Find which product categories generate the most revenue and whether this changes by season.
+### Task: 4 Revenue by Category & Season
+### Find which product categories generate the most revenue and whether this changes by season.
 
 ```sql
 select category, season , sum(purchase_amount_usd) as total_revenue
@@ -154,8 +150,7 @@ from shopping
 group by category, season ;
 ```
 
-###Clothing makes the most money in every season. 
-###Accessories are second, footwear is average, and outerwear brings the least. The main product focus should stay on clothing all year.
+### Clothing makes the most money in every season. Accessories are second, footwear is average, and outerwear brings the least. The main product focus should stay on clothing all year.
 
 
 ###Task 5 — Payment Method & Spending Identify: 
@@ -180,17 +175,16 @@ GROUP BY payment_method
 ORDER BY total_revenue DESC;
 ```
 
-###People use PayPal, Credit Card, and Cash the most. Customers who pay by card spend slightly more than others, 
-###so card payments should be made easy at checkout.
+### People use PayPal, Credit Card, and Cash the most. Customers who pay by card spend slightly more than others, so card payments should be made easy at checkout.
 
 
 
-###Task 6 — Customer Purchase Frequency Segments
+### Task 6 — Customer Purchase Frequency Segments
 
-###Group customers into behavior types such as:
-###Frequent buyers
-###Occasional buyers
-###Based on how often they shop and how much they spend.
+### Group customers into behavior types such as:
+### Frequent buyers
+### Occasional buyers
+### Based on how often they shop and how much they spend.
 
 ```sql
 SELECT
@@ -212,18 +206,17 @@ GROUP BY frequency_of_purchases
 ORDER BY total_revenue DESC;
 ```
 
-###Weekly, fortnightly, and monthly buyers are the most valuable customers. 
-###People who buy only once a year bring much less value. The business should try to move yearly buyers into more regular buyers.
+### Weekly, fortnightly, and monthly buyers are the most valuable customers. People who buy only once a year bring much less value. The business should try to move yearly buyers into more regular buyers.
 
 
 
 
-###Task 7 — Ratings & Product Strategy
+### Task 7 — Ratings & Product Strategy
 
-###Check whether review ratings are higher for:
-###Certain categories
-###Certain sizes
-###Certain seasons
+### Check whether review ratings are higher for:
+### Certain categories
+### Certain sizes
+### Certain seasons
 
 ```sql
 SELECT 'Category' AS type, category AS item, AVG(review_rating) AS avg_rating
@@ -245,11 +238,10 @@ ORDER BY type, avg_rating DESC;
 ```
 
 
-###Task 8 — Location-Based Opportunity
-
-###Find locations where:
-###Customers spend a lot
-###But do not shop often
+### Task 8 — Location-Based Opportunity
+### Find locations where:
+### Customers spend a lot
+### But do not shop often
 
 ```sql
 SELECT
@@ -273,7 +265,4 @@ HAVING
     AVG(previous_purchases) < (SELECT AVG(previous_purchases) FROM shopping)
 ORDER BY avg_spend_per_customer DESC;
 ```
-
-
-####Some locations have customers who spend a lot when they shop but do not come back often. 
-###These places are good targets for loyalty programs and marketing to make customers buy more often.
+#### Some locations have customers who spend a lot when they shop but do not come back often. These places are good targets for loyalty programs and marketing to make customers buy more often.
