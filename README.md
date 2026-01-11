@@ -68,7 +68,7 @@ GROUP BY age_group
 ORDER BY total_purchase_amount DESC;
 ````
 
-### Older customers bring the most total money, but younger and older customers spend almost the same per person. The reason older customers bring more money is because there are more of them, not because they spend more.
+## Older customers bring the most total money, but younger and older customers spend almost the same per person. The reason older customers bring more money is because there are more of them, not because they spend more.
 
 
 ### Task 2:
@@ -107,7 +107,7 @@ ORDER BY
 ```
 
 
-### People with a subscription do not spend more or buy more often than people without one. There are just fewer subscribers. So the subscription plan is not really changing how people shop.
+## People with a subscription do not spend more or buy more often than people without one. There are just fewer subscribers. So the subscription plan is not really changing how people shop.
 
 
 
@@ -137,7 +137,7 @@ FROM (
 GROUP BY discount_applied;
 ````
 
-### People who use discounts do not spend more money. They only buy slightly more often. So discounts are mostly used by customers who already like the brand, not to bring in new big buyers.
+## People who use discounts do not spend more money. They only buy slightly more often. So discounts are mostly used by customers who already like the brand, not to bring in new big buyers.
 
 
 
@@ -150,10 +150,10 @@ from shopping
 group by category, season ;
 ```
 
-### Clothing makes the most money in every season. Accessories are second, footwear is average, and outerwear brings the least. The main product focus should stay on clothing all year.
+## Clothing makes the most money in every season. Accessories are second, footwear is average, and outerwear brings the least. The main product focus should stay on clothing all year.
 
 
-###Task 5 — Payment Method & Spending Identify: 
+### Task 5 — Payment Method & Spending Identify: 
    ###       The most commonly used payment methods Whether some payment methods are linked to higher spending
 
 
@@ -175,7 +175,7 @@ GROUP BY payment_method
 ORDER BY total_revenue DESC;
 ```
 
-### People use PayPal, Credit Card, and Cash the most. Customers who pay by card spend slightly more than others, so card payments should be made easy at checkout.
+## People use PayPal, Credit Card, and Cash the most. Customers who pay by card spend slightly more than others, so card payments should be made easy at checkout.
 
 
 
@@ -206,7 +206,7 @@ GROUP BY frequency_of_purchases
 ORDER BY total_revenue DESC;
 ```
 
-### Weekly, fortnightly, and monthly buyers are the most valuable customers. People who buy only once a year bring much less value. The business should try to move yearly buyers into more regular buyers.
+## Weekly, fortnightly, and monthly buyers are the most valuable customers. People who buy only once a year bring much less value. The business should try to move yearly buyers into more regular buyers.
 
 
 
@@ -265,4 +265,4 @@ HAVING
     AVG(previous_purchases) < (SELECT AVG(previous_purchases) FROM shopping)
 ORDER BY avg_spend_per_customer DESC;
 ```
-#### Some locations have customers who spend a lot when they shop but do not come back often. These places are good targets for loyalty programs and marketing to make customers buy more often.
+## Some locations have customers who spend a lot when they shop but do not come back often. These places are good targets for loyalty programs and marketing to make customers buy more often.
