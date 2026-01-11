@@ -1,3 +1,6 @@
+![](photo.png)
+
+
 ## Overview
 
 This project analyzes customer shopping data to understand how people buy products, how much they spend, and what factors influence their behavior. Using SQL and PostgreSQL, the data was explored to identify revenue patterns, customer loyalty, and the impact of discounts, subscriptions, and product choices. The goal is to help a business make better decisions about marketing, pricing, and product strategy.
